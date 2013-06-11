@@ -28,7 +28,7 @@ SET(DEPLIBS
   )
 
 
-# Make the mba library
+# Make the lsmg library
 
 FILE(GLOB_RECURSE lsmg_SRCS src/*.C src/*.cpp include/*.h)
 ADD_LIBRARY(lsmg ${lsmg_SRCS})

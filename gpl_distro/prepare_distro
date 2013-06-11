@@ -2,7 +2,7 @@
 
 # removing result file structure
 EXTRA_CATALOG=extras
-RESULT_CATALOG=lsmg-1.1
+RESULT_CATALOG=lsmg-1.3
 rm -r $RESULT_CATALOG
 
 # reporting activity to user
@@ -21,9 +21,10 @@ mkdir $RESULT_CATALOG/doc/images
 
 # copying root-level files
 cp $EXTRA_CATALOG/COPYING $RESULT_CATALOG
-cp $EXTRA_CATALOG/makefile_template $RESULT_CATALOG/Makefile
+cp ../CMakeLists.txt $RESULT_CATALOG
 cp $EXTRA_CATALOG/README $RESULT_CATALOG
-cp $EXTRA_CATALOG/local_settings $RESULT_CATALOG
+cp $EXTRA_CATALOG/ChangeLog $RESULT_CATALOG
+cp $EXTRA_CATALOG/INSTALL $RESULT_CATALOG
 cp ../Data/scat.dat $RESULT_CATALOG/Data
 cp ../Doxyfile $RESULT_CATALOG
 cp ../doc/images/Utladalen.jpg $RESULT_CATALOG/doc/images
@@ -31,8 +32,8 @@ cp ../doc/images/SINTEFlogo.gif $RESULT_CATALOG/doc/images
 
 # copying header files
 HEADERFILES=`ls ../include/*.h`
-MBA_HEADERFILES=`ls ../../mba/include/*.h | grep -v doxymain.h`
-HEADERFILES=$HEADERFILES" "$MBA_HEADERFILES
+#MBA_HEADERFILES=`ls ../../mba/include/*.h | grep -v doxymain.h`
+#HEADERFILES=$HEADERFILES" "$MBA_HEADERFILES
 for n in $HEADERFILES
 do
   FILENAME=`basename $n`
@@ -60,8 +61,8 @@ done
 
 #generating source files
 SOURCEFILES=`ls ../src/*.cpp`
-MBA_SOURCEFILES=`ls ../../mba/src/*.cpp`
-SOURCEFILES=$SOURCEFILES" "$MBA_SOURCEFILES
+#MBA_SOURCEFILES=`ls ../../mba/src/*.cpp`
+#SOURCEFILES=$SOURCEFILES" "$MBA_SOURCEFILES
 
 # make sure the 'removecomments' program is compiled
 g++ -O3 $EXTRA_CATALOG/removecomments.C -o $EXTRA_CATALOG/removecomments

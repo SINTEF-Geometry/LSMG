@@ -3,33 +3,18 @@ Mathematics.  LSMG stands for "Least Squares Multi-Grid (B-spline
 approximation)".  The LSMG library is a means to make (penalized)
 least squares approximations to scattered data with B-spline surfaces.
 
-The code is copyrighted by SINTEF ICT, Applied Mathematics, and
-licensed under the GPL.
+This software was written by the Geometry Group at SINTEF ICT,
+Department of Applied Mathematics.
 
-To make the library, type 'make' or 'make lib' at the command prompt.
-(The library file will be saved in the 'lib' directory).  It has only
-been tested for linux users using the g++ compiler.  NB: You WILL need
-to have the BOOST library installed (downloadable at http://boost.org)
+Requirements:
+* CMake
+  www.cmake.org
+* Boost
+  www.boost.org
 
-Note about the MBA library: This distribution contains header and
-source files from the MBA library in order to work on its
-own. However, only one library file is produced by compilation. (Thus,
-MBA is a "subset" of LSMG.)
+For information on installation, see the INSTALL file.
 
-The code itself should be compilable with Microsoft Visual C++, but
-you will have to set up your own project.  Alternatively, cygwin might
-work using the present makefile.
+You can generate Doxygen information by typing 'doxygen' in the base
+directory.
 
-If you have Doxygen installed, you can generate documentation by
-typing 'doxygen' at the command prompt.  The documentation can also be
-found on-line at:
-
-http://www.sintef.no/math_software
-
-For commercial licenses, support or comments, please contact SINTEF
-ICT, Dept.  of Applied Mathematics.
-
-   Contact information: e-mail: tor.dokken@sintef.no  
-   SINTEF ICT, Department of Applied Mathematics,     
-   P.O. Box 124 Blindern,                             
-   0314 Oslo, Norway.                                 
+Good luck!
